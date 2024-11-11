@@ -1,0 +1,85 @@
+<html><head><title>Report Title</title><style>
+					body, td, th {
+						font-family: Arial;
+						font-size: 10pt;
+					}
+					table {
+						width: 100%;
+						border-collapse:collapse;
+					}
+					th {
+						border: Solid 1px silver;
+						text-align: left;
+						background: #FFF2E5;
+					}
+					td {
+						border: Solid 1px silver;
+						text-align: left;
+					}
+					.success {
+						background: #00FF00;
+					}
+					.failure {
+						background: #FF0000;
+					}
+					.failure a {
+						color: white;
+					}
+					.ignored {
+						background: #FFFF00;
+					}
+					.error {
+						background: silver;
+					}
+					.message {
+						font-style: italic;
+					}
+					.stacktrace{
+						font-family: monospace;
+						font-size: 8pt;
+					}
+					.bar {
+						height: 1.5em;
+					}
+					.bar div {
+						height: 1.5em;
+						float: left;
+					}
+				</style><script type="text/javascript">
+				function showHide(id){
+					var el = document.getElementById(id);
+					el.style.display = el.style.display === 'none' ? '' : 'none';
+				}
+				</script></head><body><h1>Test report : SampleTestSuite.Feature.</h1><h2>Summary</h2><table><tbody><tr><th>Features</th><th colspan="2">Success rate</th><th>Scenarios</th><th>Success</th><th>Failed</th><th>Ignored</th></tr><tr><td>2</td><td>76.92%</td><td><div class="bar"><div class="success" style="width:153.84615384615387px" title="10">&nbsp;</div><div class="failure" style="width:46.15384615384615px" title="3">&nbsp;</div></div></td><td>13</td><td>10</td><td>3</td><td>0</td></tr></tbody></table><hr /><h2>Feature Summary</h2><table><tbody><tr><th>Features</th><th colspan="2">Success rate</th><th>Scenarios</th><th>Success</th><th>Failed</th><th>Ignored</th></tr><tr><td>APITestsFeature</td><td>75.00%</td><td><div class="bar"><div class="success" style="width:150px" title="9">&nbsp;</div><div class="failure" style="width:50px" title="3">&nbsp;</div></div></td><td>12</td><td>9</td><td>3</td><td>0</td></tr><tr><td>UTTestsFeature</td><td>100.00%</td><td><div class="bar"><div class="success" style="width:200px" title="1">&nbsp;</div></div></td><td>1</td><td>1</td><td>0</td><td>0</td></tr></tbody></table><hr /><h2>Feature Details</h2><h3>APITestsFeature</h3><table><tbody><tr><th>Scenario</th><th>Status</th><th>Time (s)</th></tr><tr><td>Buy energy of each type("electric","2",null)</td><td class="Success">Success</td><td>3.112</td></tr><tr><td>Buy energy of each type("gas","3",null)</td><td class="Success">Success</td><td>1.971</td></tr><tr><td>Buy energy of each type("nuclear","4",null)</td><td class="failure"><a href="#" onclick="showHide('ID0EBAFAAAAAAAAAAA'); return false;">Failure</a></td><td>2.023</td></tr><tr id="ID0EBAFAAAAAAAAAAA" style="display: none;"><td colspan="3" class="error"><p class="message">  There is no nuclear fuel to purchase!
+Assert.That(ScenarioContext.Get&lt;string&gt;("message").Contains(expectedMessageString), Is.True)
+  Expected: True
+  But was:  False
+</p><p class="stacktrace">   at SampleTestSuite.Steps.APISteps.ThenThePurchasedShouldBeSuccessful() in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Steps\APISteps.cs:line 88
+<br />   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Bindings\BindingInvoker.cs:line 68
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 567
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 481
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep() in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 234
+<br />   at SampleTestSuite.Feature.APITestsFeature.ScenarioCleanup()
+<br />   at SampleTestSuite.Feature.APITestsFeature.BuyEnergyOfEachType(String energyType, String quantity, String[] exampleTags) in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Feature\APITests.feature:line 21
+<br /></p></td></tr><tr><td>Buy energy of each type("oil","5",null)</td><td class="Success">Success</td><td>1.899</td></tr><tr><td>Fetch the order details created("electric","6",null)</td><td class="Success">Success</td><td>1.957</td></tr><tr><td>Fetch the order details created("gas","7",null)</td><td class="Success">Success</td><td>1.956</td></tr><tr><td>Fetch the order details created("nuclear","8",null)</td><td class="failure"><a href="#" onclick="showHide('ID0EBADAAAAAAAAAAA'); return false;">Failure</a></td><td>1.941</td></tr><tr id="ID0EBADAAAAAAAAAAA" style="display: none;"><td colspan="3" class="error"><p class="message">  Order is not created
+Assert.That(isOrderCreated.Equals(true), Is.True)
+  Expected: True
+  But was:  False
+</p><p class="stacktrace">   at SampleTestSuite.Steps.APISteps.ThenTheOrderDetailsIsRetrievedSuccessfully() in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Steps\APISteps.cs:line 113
+<br />   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Bindings\BindingInvoker.cs:line 68
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 567
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 481
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep() in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 234
+<br />   at SampleTestSuite.Feature.APITestsFeature.ScenarioCleanup()
+<br />   at SampleTestSuite.Feature.APITestsFeature.FetchTheOrderDetailsCreated(String energyType, String quantity, String[] exampleTags) in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Feature\APITests.feature:line 34
+<br /></p></td></tr><tr><td>Fetch the order details created("oil","9",null)</td><td class="Success">Success</td><td>1.903</td></tr><tr><td>Fetch the energy details</td><td class="Success">Success</td><td>1.717</td></tr><tr><td>Fetch the order details created prior to the current day</td><td class="Success">Success</td><td>1.822</td></tr><tr><td>Reset the test data</td><td class="failure"><a href="#" onclick="showHide('ID0EBAAAAAAAAAAA'); return false;">Failure</a></td><td>1.742</td></tr><tr id="ID0EBAAAAAAAAAAA" style="display: none;"><td colspan="3" class="error"><p class="message">  Assert.That(ScenarioContext.Get&lt;string&gt;("ResetResponseMessage").Equals("Success"), Is.True)
+  Expected: True
+  But was:  False
+</p><p class="stacktrace">   at SampleTestSuite.Steps.APISteps.ThenTheResponseIsReturnedAsSuccess() in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Steps\APISteps.cs:line 40
+<br />   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Bindings\BindingInvoker.cs:line 68
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments, TimeSpan&amp; duration) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 567
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(IContextManager contextManager, StepInstance stepInstance) in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 481
+<br />   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep() in D:\a\1\s\TechTalk.SpecFlow\Infrastructure\TestExecutionEngine.cs:line 234
+<br />   at SampleTestSuite.Feature.APITestsFeature.ScenarioCleanup()
+<br />   at SampleTestSuite.Feature.APITestsFeature.ResetTheTestData() in C:\Users\sneha.valmeti\Projects\SampleTestSuite\SampleTestSuite\SampleTestSuite\Feature\APITests.feature:line 10
+<br /></p></td></tr><tr><td>Successful logon using API</td><td class="Success">Success</td><td>1.822</td></tr></tbody></table><h3>UTTestsFeature</h3><table><tbody><tr><th>Scenario</th><th>Status</th><th>Time (s)</th></tr><tr><td>Buy gas of given quantity</td><td class="Success">Success</td><td>7.222</td></tr></tbody></table></body></html>
