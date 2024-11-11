@@ -8,6 +8,5 @@ namespace SampleTestSuite.Pages
         public PageFactory(IObjectContainer container) : base(container) { }
 
         public LandingPage LandingPage => GetPage<LandingPage>();
-
     }
 }

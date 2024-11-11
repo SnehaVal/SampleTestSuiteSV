@@ -4,12 +4,10 @@ using Framework.Selenium.Step;
 using Framework.WebRequests;
 using Framework.WebRequests.ClassModels;
 using NUnit.Framework;
+using SampleTestSuite.Pages;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 
 namespace SampleTestSuite.Steps
@@ -133,7 +131,6 @@ namespace SampleTestSuite.Steps
             }
             Logger.Info($"The number of orders created prior to the current date is {count}");
             ScenarioContext.Add("NumberOfOrdersCreatedPriorToCurrentDay", count);
-        }
-
+        }        
     }
 }

@@ -5,7 +5,7 @@ using TechTalk.SpecFlow;
 namespace SampleTestSuite.Hooks
 {
     [Binding,
-        Scope(Feature = "LandingPage"),
+        Scope(Feature = "UTTests"),
         Scope(Feature = "APITests")]
     public class Hooks : HooksBase
     {

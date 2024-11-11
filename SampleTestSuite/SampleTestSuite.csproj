@@ -111,12 +111,12 @@
     <Compile Include="Pages\PageFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\APISteps.cs" />
-    <Compile Include="Steps\LandingPage.cs" />
+    <Compile Include="Steps\UISteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Feature\APITests.feature" />
-    <None Include="Feature\LandingPage.feature" />
+    <None Include="Feature\UITests.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
