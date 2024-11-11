@@ -1,0 +1,102 @@
+=> Ensek.TestSuite.Feature.LandingPageFeature.LogOnToTheAplication
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.BuyEnergyOfEachType("electric","2",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.4s)
+When the electric of 2 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("electric", 2) (0.0s)
+Then the purchased should be successful
+-> done: LogOnUsingAPI.ThenThePurchasedShouldBeSuccessful() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.BuyEnergyOfEachType("gas","3",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+When the gas of 3 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("gas", 3) (0.0s)
+Then the purchased should be successful
+-> done: LogOnUsingAPI.ThenThePurchasedShouldBeSuccessful() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.BuyEnergyOfEachType("nuclear","4",null)
+=> Ensek.TestSuite.Feature.LandingPageFeature.LogOnToTheAplication
+Given the log on details is entered
+-> done: LandingPage.GivenTheLogOnDetailsIsEntered() (4.3s)
+When the submit button is clicked
+-> done: LandingPage.WhenTheSubmitButtonIsClicked() (0.0s)
+Then the user is logged in successfully
+-> done: LandingPage.ThenTheUserIsLoggedInSuccessfully() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.BuyEnergyOfEachType("nuclear","4",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+When the nuclear of 4 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("nuclear", 4) (0.0s)
+Then the purchased should be successful
+-> error:   There is no nuclear fuel to purchase!
+Assert.That(ScenarioContext.Get<string>("message").Contains(expectedMessageString), Is.True)
+  Expected: True
+  But was:  False
+ (0.1s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.BuyEnergyOfEachType("oil","5",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+When the oil of 5 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("oil", 5) (0.0s)
+Then the purchased should be successful
+-> done: LogOnUsingAPI.ThenThePurchasedShouldBeSuccessful() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheEnergyDetails
+When the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+Then the energy details is retrieved successfully
+-> done: LogOnUsingAPI.ThenTheEnergyDetailsIsRetrievedSuccessfully() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheOrderDetailsCreated("electric","6",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+And the electric of 6 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("electric", 6) (0.0s)
+When the order details is requested using API
+-> done: LogOnUsingAPI.WhenTheOrderDetailsIsRequestedUsingAPI() (0.0s)
+Then the order details is retrieved successfully
+-> done: LogOnUsingAPI.ThenTheOrderDetailsIsRetrievedSuccessfully() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheOrderDetailsCreated("gas","7",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+And the gas of 7 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("gas", 7) (0.0s)
+When the order details is requested using API
+-> done: LogOnUsingAPI.WhenTheOrderDetailsIsRequestedUsingAPI() (0.0s)
+Then the order details is retrieved successfully
+-> done: LogOnUsingAPI.ThenTheOrderDetailsIsRetrievedSuccessfully() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheOrderDetailsCreated("nuclear","8",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+And the nuclear of 8 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("nuclear", 8) (0.0s)
+When the order details is requested using API
+-> done: LogOnUsingAPI.WhenTheOrderDetailsIsRequestedUsingAPI() (0.0s)
+Then the order details is retrieved successfully
+-> error:   Order is not created
+Assert.That(isOrderCreated.Equals(true), Is.True)
+  Expected: True
+  But was:  False
+ (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheOrderDetailsCreated("oil","9",null)
+Given the energy details is requested using API
+-> done: LogOnUsingAPI.WhenTheEnergyDetailsIsRequestedUsingAPI() (0.0s)
+And the oil of 9 is purchased using API
+-> done: LogOnUsingAPI.WhenTheEnergyIsPurchasedUsingAPI("oil", 9) (0.0s)
+When the order details is requested using API
+-> done: LogOnUsingAPI.WhenTheOrderDetailsIsRequestedUsingAPI() (0.0s)
+Then the order details is retrieved successfully
+-> done: LogOnUsingAPI.ThenTheOrderDetailsIsRetrievedSuccessfully() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.FetchTheOrderDetailsCreatedPriorToTheCurrentDay
+Given the order details is requested using API
+-> done: LogOnUsingAPI.WhenTheOrderDetailsIsRequestedUsingAPI() (0.0s)
+Then the number of orders created prior to the current day is calculated
+-> done: LogOnUsingAPI.ThenTheNumberOfOrdersCreatedPriorToTheCurrentDayIsCalculated() (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.ResetTheTestData
+When the test data is reset
+-> done: LogOnUsingAPI.GivenTheTestDataIsReset() (0.0s)
+Then the response is returned as success
+-> error:   Assert.That(ScenarioContext.Get<string>("ResetResponseMessage").Equals("Success"), Is.True)
+  Expected: True
+  But was:  False
+ (0.0s)
+=> Ensek.TestSuite.Feature.LogOnUsingAPIFeature.SuccessfulLogonUsingAPI
+Given the user is logged on using API
+-> done: LogOnUsingAPI.GivenTheUserIsLoggedOnUsingAPI() (0.1s)
